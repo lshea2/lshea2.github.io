@@ -1,0 +1,71 @@
+{
+    "particles": {
+      "number": {
+        "value": 40,
+        "density": {
+          "enable": false,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "image",
+        "image": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Love_Heart_SVG.svg/645px-Love_Heart_SVG.svg.png"
+        }
+      },
+      "line-linked":{
+          "enable": false
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 10,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 80,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      },
+      "interactivity":{
+          "detect_on": "none",
+          "events":{
+              "onhover":{
+                  "enable": false
+              },
+              "onclick":{
+                  "enable": false
+              }
+          },
+          "modes":{
+
+          }
+      }
+    }
+  }

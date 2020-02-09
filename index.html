@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuck E's Date Planner</title>
+    <script src="https://maps.alk.com/api/1.2/ALKMaps.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap" rel="stylesheet">
+
+    
+
+</head>
+<body>
+    <script src="particleBackground.js"></script>
+    <div id = "particles-js" class = "behind"></div>
+    <div class = "content">
+        <div class = "title">
+            <img class = "mainTitle" src = "title.jpg" alt = "Chuck E's">
+            <p class = "mainTitleText">Valentine's Date Planner</p>
+            <p class = "subTitle">What's better than traveling the state with that special someone?</p>
+        </div>
+        <div style = "min-height: 5vh;"></div>
+        <div class = "display">
+            <div class = "map" id = "map"><script src = "mapscript.js"></script></div>
+            
+            <div class = "bottom">
+                <div class = "inputs">
+                    <h3>What Do You Want To Do?</h3>
+                    <ul class = "choices">
+                        <input class = "choice" type="checkbox" id="Restaurant" value="Restaurant">
+                        <label for="idea1"> Restaurant</label><br>
+                        <input class = "choice" type="checkbox" id="Theater" value="Movie">
+                        <label for="idea2"> Movie</label><br>
+                        <input class = "choice" type="checkbox" id="Bar" value="Bar">
+                        <label for="idea3"> Get kicked out of a bar</label><br>
+                        <input class = "choice" type="checkbox" id="Bowling" value="Bowling">
+                        <label for="idea4"> Bowling</label><br>
+                        <input class = "choice" type="checkbox" id="Skating" value="Ice Skating">
+                        <label for="idea6"> Ice Skating</label><br>
+                        <input class = "choice" type="checkbox" id="Arcade" value="Arcade">
+                        <label for="idea6">Beat little kids' highscores at an arcade</label><br>
+                        <input class = "choice" type="checkbox" id="Zoo" value="Zoo">
+                        <label for="idea6">Look at encaged creatures</label><br>
+                        <input class = "choice" type="checkbox" id="Campgrounds" value="Campgrounds">
+                        <label for="idea6">Camp outside for fun?</label><br>
+                        <input class = "choice" type="checkbox" id="Zipline" value="Zipline">
+                        <label for="idea6">Ziplining</label><br>
+                        <input class = "choice" type="checkbox" id="Stadium" value="Stadium">
+                        <label for="idea6">Sports Ball Game</label><br>
+                    </ul>
+                    <ul class = "choices">
+                        <input class = "choice" type="checkbox" id="Thrift" value="Thrift">
+                        <label for="idea6">Thrift Shopping</label><br>
+                        <input class = "choice" type="checkbox" id="Museum" value="Museum">
+                        <label for="idea6">Museum</label><br>
+                        <input class = "choice" type="checkbox" id="Park" value="Park">
+                        <label for="idea6">Walk in the Park</label><br>
+                        <input class = "choice" type="checkbox" id="Mall" value="Mall">
+                        <label for="idea6">Return Gifts at the Mall</label><br>
+                        <input class = "choice" type="checkbox" id="Airport" value="Airport">
+                        <label for="idea6">Visit an Airport</label><br>
+                        <input class = "choice" type="checkbox" id="Library" value="Library">
+                        <label for="idea6">Destroy a Library</label><br>
+                        <input class = "choice" type="checkbox" id="Salon" value="Salon">
+                        <label for="idea6">Get matching haircuts</label><br>
+                        <input class = "choice" type="checkbox" id="DMV" value="DMV">
+                        <label for="idea6">Wait in line at the DMV</label><br>
+                        <input class = "choice" type="checkbox" id="Hospital" value="Hospital">
+                        <label for="idea6">Visit elderly at a Hospital</label><br>
+                        <input class = "choice" type="checkbox" id="Cemetary" value="Cemetary">
+                        <label for="idea6">Go to a cemetary</label><br>
+                    </ul>
+                    <ul class = "choices">
+                        <input class = "choice" type="checkbox" id="Landfill" value="Landfill">
+                        <label for="idea6">Look for goodies at a landfill</label><br>
+                        <input class = "choice" type="checkbox" id="Courthouse" value="Court">
+                        <label for="idea6">Serve jury duty</label><br>
+                        <input class = "choice" type="checkbox" id="Gym" value="Gym">
+                        <label for="idea6">Get very strong at a gym</label><br>
+                        <input class = "choice" type="checkbox" id="Jail" value="Jail">
+                        <label for="idea6">Perform illegal activities</label><br>
+                        <input class = "choice" type="checkbox" id="Wegmans" value="Wegmans">
+                        <label for="idea6">Grocery Shopping</label><br>
+                        <input class = "choice" type="checkbox" id="Laundromat" value="Laundry">
+                        <label for="idea6">Do Laundry</label><br>
+                        <input onChange = "chuck();" class = "static" type="checkbox" id="Chuck" value="Chuck" checked>
+                        <label for="idea6"><a class = "link" href="https://www.chuckecheese.com/">Go to Chuck E. Cheese</a></label><br>
+                        <input class = "choice" type="checkbox" id="School" value="School">
+                        <label for="idea6">Learn basic mathematics</label><br>
+                        <input class = "choice" type="checkbox" id="Post%office" value="Post Office">
+                        <label for="idea6">Mail a letter</label><br>
+                        <input class = "choice" type="checkbox" id="Flower%shop" value="Flower Shop">
+                        <label for="idea6">Buy each other flowers</label><br>
+                    </ul>
+                    
+                </div>
+                <Button class = "button" onClick = "CreateRoute()">Generate a Spicy Date</Button>
+            </div>
+        </div>
+        <div class = "side">
+            <h1>Your Date:</h1>
+            <h1 id = "MilesCount"></h1>
+            <ul id = "StopList">
+            
+            </ul>
+        </div>
+    </div>   
+</body>
+</html>
